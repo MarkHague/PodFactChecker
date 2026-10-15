@@ -1,0 +1,19 @@
+[project]
+name = "podfactchecker"
+version = "0.1.0"
+description = "Automated fact-checking companion for podcasts."
+authors = [
+    {name = "Mark Hague"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas (>=3.0.6,<4.0.0)",
+    "requests (>=2.34.2,<3.0.0)",
+    "feedparser (>=6.0.14,<7.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
