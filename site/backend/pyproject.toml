@@ -1,5 +1,5 @@
 [project]
-name = "podfactchecker"
+name = "pfc-backend"
 version = "0.1.0"
 description = "Automated fact-checking companion for podcasts."
 authors = [
@@ -10,10 +10,19 @@ requires-python = ">=3.13"
 dependencies = [
     "pandas (>=3.0.6,<4.0.0)",
     "requests (>=2.34.2,<3.0.0)",
-    "feedparser (>=6.0.14,<7.0.0)"
+    "feedparser (>=6.0.14,<7.0.0)",
+    "boto3 (>=1.43.118,<2.0.0)"
 ]
 
+
+[tool.poetry]
+packages = [{include = "pfc_backend", from = "src"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ipykernel (>=7.4.0,<8.0.0)"
+]
