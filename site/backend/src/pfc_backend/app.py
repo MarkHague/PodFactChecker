@@ -6,7 +6,7 @@ import threading
 import pandas as pd
 import json
 from datetime import datetime, timezone
-from api_v3 import factcheck, process_file, process_rss, trusted_df  
+from pfc_backend.api_v3 import factcheck, process_file, process_rss, trusted_df  
 from flask import send_file
 import shutil
 import time
