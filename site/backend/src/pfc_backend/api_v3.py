@@ -11,17 +11,6 @@ import requests
 import json
 import subprocess
 
-def process_file(podoption):
-  '''
-  Prepares an audio file for fact checking and calls the factcheck function with it.
-  Args: podoption - an audio file
-  Returns: the results of fact checking the podoption file
-  '''
-
-  model = whisper.load_model("small.en")
-  transcript = model.transcribe(podoption)["text"]
-  return transcript
-
 def probe_audio_format(url: str) -> str:
   """
   Checks that the file at url is an audio file, reading only its headers (no full download).
